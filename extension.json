@@ -1,0 +1,30 @@
+{
+  "name": "AuthAzureEasyAuth",
+  "namemsg": "authazureeasyauth-extensionname",
+  "version": "1.0.0",
+  "author": ["Jan Hajek", "TheNetw.org"],
+  "url": "https://github.com/TheNetworg/mediawiki-easyauth",
+  "descriptionmsg": "authazureeasyauth-desc",
+  "type": "authentication",
+  "license-name": "MIT",
+  "MessagesDirs": {
+    "AuthAzureEasyAuth": [
+      "i18n"
+    ]
+  },
+  "AutoloadClasses": {
+    "AuthAzureEasyAuth": "AuthAzureEasyAuth.php"
+  },
+  "SessionProviders": {
+    "AuthAzureEasyAuth": {
+      "class": "AuthAzureEasyAuth",
+      "args": [{"priority": 80}]
+    }
+  },
+  "config": {
+    "_prefix": "",
+    "wgAuthAzureEasyAuthNotify": false,
+    "wgAuthAzureEasyAuthEnvVariable" : "REMOTE_USER"
+  },
+  "manifest_version": 1
+}

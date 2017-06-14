@@ -1,0 +1,10 @@
+{
+	"name": "thenetworg/mediawiki-easyauth",
+	"type": "mediawiki-extension",   
+	"description": "",
+	"homepage": "https://github.com/TheNetworg/mediawiki-easyauth",
+	"license" : "MIT",
+	"require": {
+		"composer/installers": ">=1.0.1"
+	}
+}
