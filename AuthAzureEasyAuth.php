@@ -30,8 +30,10 @@ class AuthAzureEasyAuth extends MediaWiki\Session\ImmutableSessionProviderWithCo
         }
 
         $this->priority = $params['priority'];
+        
+        $principalValue = isset($_SERVER["MS_CLIENT_PRINCIPAL"]) ? $_SERVER["MS_CLIENT_PRINCIPAL"] : $_SERVER["HTTP_X_MS_CLIENT_PRINCIPAL"];
 
-        $this->principal = json_decode(utf8_encode($_SERVER["MS_CLIENT_PRINCIPAL"]));
+        $this->principal = json_decode(base64_decode($principalValue));
     }
     
     public function provideSessionInfo(WebRequest $request)
